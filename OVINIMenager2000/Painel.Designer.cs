@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.grbDados = new System.Windows.Forms.GroupBox();
-            this.lblSituacao = new System.Windows.Forms.Label();
-            this.lblAbduzidos = new System.Windows.Forms.Label();
+            this.lblPlaneta = new System.Windows.Forms.Label();
             this.lblTripulantes = new System.Windows.Forms.Label();
+            this.lblAbduzidos = new System.Windows.Forms.Label();
+            this.lblSituacao = new System.Windows.Forms.Label();
             this.btnLigar = new System.Windows.Forms.Button();
             this.btnDesligar = new System.Windows.Forms.Button();
             this.btnAddTripulante = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.btnRetornarAoOrigem = new System.Windows.Forms.Button();
             this.cmbPlanetas = new System.Windows.Forms.ComboBox();
             this.btnMudar = new System.Windows.Forms.Button();
-            this.lblPlaneta = new System.Windows.Forms.Label();
             this.grbDados.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +59,23 @@
             this.grbDados.TabStop = false;
             this.grbDados.Text = "Dados:";
             // 
-            // lblSituacao
+            // lblPlaneta
             // 
-            this.lblSituacao.AutoSize = true;
-            this.lblSituacao.Location = new System.Drawing.Point(7, 24);
-            this.lblSituacao.Name = "lblSituacao";
-            this.lblSituacao.Size = new System.Drawing.Size(70, 19);
-            this.lblSituacao.TabIndex = 0;
-            this.lblSituacao.Text = "Situação:";
+            this.lblPlaneta.AutoSize = true;
+            this.lblPlaneta.Location = new System.Drawing.Point(7, 84);
+            this.lblPlaneta.Name = "lblPlaneta";
+            this.lblPlaneta.Size = new System.Drawing.Size(63, 19);
+            this.lblPlaneta.TabIndex = 3;
+            this.lblPlaneta.Text = "Planeta:";
+            // 
+            // lblTripulantes
+            // 
+            this.lblTripulantes.AutoSize = true;
+            this.lblTripulantes.Location = new System.Drawing.Point(7, 62);
+            this.lblTripulantes.Name = "lblTripulantes";
+            this.lblTripulantes.Size = new System.Drawing.Size(87, 19);
+            this.lblTripulantes.TabIndex = 2;
+            this.lblTripulantes.Text = "Tripulantes:";
             // 
             // lblAbduzidos
             // 
@@ -77,14 +86,14 @@
             this.lblAbduzidos.TabIndex = 1;
             this.lblAbduzidos.Text = "Abduzidos:";
             // 
-            // lblTripulantes
+            // lblSituacao
             // 
-            this.lblTripulantes.AutoSize = true;
-            this.lblTripulantes.Location = new System.Drawing.Point(7, 62);
-            this.lblTripulantes.Name = "lblTripulantes";
-            this.lblTripulantes.Size = new System.Drawing.Size(87, 19);
-            this.lblTripulantes.TabIndex = 2;
-            this.lblTripulantes.Text = "Tripulantes:";
+            this.lblSituacao.AutoSize = true;
+            this.lblSituacao.Location = new System.Drawing.Point(7, 24);
+            this.lblSituacao.Name = "lblSituacao";
+            this.lblSituacao.Size = new System.Drawing.Size(70, 19);
+            this.lblSituacao.TabIndex = 0;
+            this.lblSituacao.Text = "Situação:";
             // 
             // btnLigar
             // 
@@ -124,6 +133,7 @@
             this.btnRemoverTripulante.TabIndex = 4;
             this.btnRemoverTripulante.Text = "Remover Tripulante";
             this.btnRemoverTripulante.UseVisualStyleBackColor = true;
+            this.btnRemoverTripulante.Click += new System.EventHandler(this.btnRemoverTripulante_Click);
             // 
             // btnAbduzir
             // 
@@ -133,6 +143,7 @@
             this.btnAbduzir.TabIndex = 5;
             this.btnAbduzir.Text = "Abduzir";
             this.btnAbduzir.UseVisualStyleBackColor = true;
+            this.btnAbduzir.Click += new System.EventHandler(this.btnAbduzir_Click);
             // 
             // btnDezabduzir
             // 
@@ -142,6 +153,7 @@
             this.btnDezabduzir.TabIndex = 6;
             this.btnDezabduzir.Text = "Dezabduzir";
             this.btnDezabduzir.UseVisualStyleBackColor = true;
+            this.btnDezabduzir.Click += new System.EventHandler(this.btnDezabduzir_Click);
             // 
             // btnRetornarAoOrigem
             // 
@@ -151,6 +163,7 @@
             this.btnRetornarAoOrigem.TabIndex = 7;
             this.btnRetornarAoOrigem.Text = "Retonar a Origem";
             this.btnRetornarAoOrigem.UseVisualStyleBackColor = true;
+            this.btnRetornarAoOrigem.Click += new System.EventHandler(this.btnRetornarAoOrigem_Click);
             // 
             // cmbPlanetas
             // 
@@ -169,15 +182,7 @@
             this.btnMudar.TabIndex = 9;
             this.btnMudar.Text = "Mudar";
             this.btnMudar.UseVisualStyleBackColor = true;
-            // 
-            // lblPlaneta
-            // 
-            this.lblPlaneta.AutoSize = true;
-            this.lblPlaneta.Location = new System.Drawing.Point(7, 84);
-            this.lblPlaneta.Name = "lblPlaneta";
-            this.lblPlaneta.Size = new System.Drawing.Size(63, 19);
-            this.lblPlaneta.TabIndex = 3;
-            this.lblPlaneta.Text = "Planeta:";
+            this.btnMudar.Click += new System.EventHandler(this.btnMudar_Click);
             // 
             // Painel
             // 
